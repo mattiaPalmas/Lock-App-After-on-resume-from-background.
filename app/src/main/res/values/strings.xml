@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lock App After Being in Background</string>
+    <string name="login">Login</string>
+    <string name="this_screen_contain_private_information">This screen contains private information about the logged in user!</string>
+    <string name="check_your_credit">Check Your Credit</string>
+    <string name="your_balance_is">Your balance is:</string>
+    <string name="email">Email</string>
+    <string name="welcome_back_please_enter_password">Welcome back. Please enter your password. \n( Example: Password1 )</string>
+    <string name="enter">Enter</string>
+    <string name="password">Password</string>
+    <string name="wrong_password">Wrong Password! (ex: Password1)</string>
+</resources>
