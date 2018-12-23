@@ -11,7 +11,7 @@ abstract class LoggedInBaseActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
-        if (!sharedPrefs.appInForeground) {
+        if (sharedPrefs.appIsComingFromBackground) {
             startUnlockWithPasswordActivity()
         }
     }

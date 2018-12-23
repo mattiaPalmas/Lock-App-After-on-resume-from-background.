@@ -13,7 +13,7 @@ class SharedPrefs(private val sharedPref: SharedPreferences) {
                 INSTANCE ?: SharedPrefs(sp).apply { INSTANCE = this }
     }
 
-    var appInForeground: Boolean
+    var appIsComingFromBackground: Boolean
         get() = sharedPref.getBoolean(Constants.APP_IN_FOREGROUND, true)
         set(value) = sharedPref.edit().putBoolean(Constants.APP_IN_FOREGROUND, value).apply()
 

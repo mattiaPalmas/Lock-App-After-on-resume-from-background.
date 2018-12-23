@@ -22,7 +22,7 @@ class PersonalInfoActivity : LoggedInBaseActivity() {
     }
 
     override fun onBackPressed() {
-        setAppInForeground(true)
+        appIsComingFromBackground(false)
         super.onBackPressed()
     }
 
@@ -33,17 +33,17 @@ class PersonalInfoActivity : LoggedInBaseActivity() {
     }
 
     override fun onStop() {
-        setAppInForeground(false)
+        appIsComingFromBackground(true)
         super.onStop()
     }
 
     private fun goToCreditScreen() {
-        setAppInForeground(true)
+        appIsComingFromBackground(false)
         val intent = Intent(this, CheckCreditActivity::class.java)
         startActivity(intent)
     }
 
-    private fun setAppInForeground(boolean: Boolean) {
-        sharedPrefs.appInForeground = boolean
+    private fun appIsComingFromBackground(boolean: Boolean) {
+        sharedPrefs.appIsComingFromBackground = boolean
     }
 }

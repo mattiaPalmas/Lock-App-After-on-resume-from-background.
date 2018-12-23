@@ -26,7 +26,7 @@ class UnlockWithPasswordActivity : AppCompatActivity() {
     private fun setUpEnterBtn() {
         enterBtn.setOnClickListener {
             if (passwordEd.text.toString() == "Password1") {
-                sharedPrefs.appInForeground = true
+                sharedPrefs.appIsComingFromBackground = false
                 finish()
             } else {
                 Toast.makeText(this, getString(R.string.wrong_password), Toast.LENGTH_LONG).show()

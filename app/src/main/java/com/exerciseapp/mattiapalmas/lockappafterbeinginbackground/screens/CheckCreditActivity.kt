@@ -19,16 +19,16 @@ class CheckCreditActivity : LoggedInBaseActivity() {
     }
 
     override fun onBackPressed() {
-        setAppInForeground(true)
+        appIsComingFromBackground(false)
         super.onBackPressed()
     }
 
     override fun onStop() {
-        setAppInForeground(false)
+        appIsComingFromBackground(true)
         super.onStop()
     }
 
-    private fun setAppInForeground(boolean: Boolean) {
-        sharedPrefs.appInForeground = boolean
+    private fun appIsComingFromBackground(boolean: Boolean) {
+        sharedPrefs.appIsComingFromBackground = boolean
     }
 }

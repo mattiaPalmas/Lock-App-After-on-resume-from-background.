@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun goToNextScreen() {
-        sharedPrefs.appInForeground = true
+        sharedPrefs.appIsComingFromBackground = false
         val intent = Intent(this, PersonalInfoActivity::class.java)
         startActivity(intent)
     }
